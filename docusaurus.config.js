@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'AI Builder',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/logo.jpg',
+  favicon: 'img/logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -49,8 +49,8 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -60,8 +60,8 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -86,7 +86,7 @@ const config = {
         title: 'AI Builder',
         logo: {
           alt: 'AI Builder Logo',
-          src: 'img/logo.jpg',
+          src: 'img/logo.png',
         },
         items: [
           {
@@ -97,7 +97,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/dawnstaryrx/AI-Builder',
             label: 'GitHub',
             position: 'right',
           },
@@ -110,8 +110,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'AI Builder',
+                href: 'https://aibuilder.best',
               },
             ],
           },
@@ -119,16 +119,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'BiliBili',
+                href: 'https://bilibili.com',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: '小红书',
+                href: 'https://xiaohongshu.com',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: '抖音',
+                href: 'https://douyin.com',
               },
             ],
           },
@@ -136,12 +136,18 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/dawnstaryrx/AI-Builder',
+              },
+            ],
+          },
+          {
+            title: '关注我',
+            items: [
+              {
+                html: `
+                  <img src="/img/qrcode.jpg" alt="关注我" style="width:100px; border-radius:4px;" />
+                `,
               },
             ],
           },
