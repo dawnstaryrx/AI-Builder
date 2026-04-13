@@ -1,11 +1,302 @@
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+.buttons {
+  margin-top: 30px;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 18px;
+  padding: 28px;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;   /* ✅ 控制按钮间距 */
+  flex-wrap: wrap; /* ✅ 小屏不挤 */
+}
+
+.buttons a {
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* 主按钮（渐变 + 发光） */
+.buttons a.button--primary {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(99,102,241,0.4);
+}
+
+.buttons a.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(99,102,241,0.6);
+}
+
+/* 次按钮（玻璃风） */
+.buttons a.button--secondary {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.buttons a.button--secondary:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle 光效 */
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #6366f1;
+  filter: blur(120px);
+  opacity: 0.2;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero::after {
+  pointer-events: none;  /* ✅ 关键：让它不拦截点击 */
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 12px;
+  opacity: 0.85;
+}
+
+.pathCard {
+  text-align: center;
+  padding: 20px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #eee;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.pathCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.sectionLight {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.pathWrapper {
+  text-align: center;
+}
+
+.pathGrid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pathCard {
+  padding: 24px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #eee;
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.pathCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.sectionDark {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: #fff;
+}
+
+.featureHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.featureHeader h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.featureHeader p {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+/* 🚀 替代 row/col */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* 卡片 */
+.featureCard {
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.35s ease;
+}
+
+.featureCard h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.featureCard p {
+  opacity: 0.75;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+@media (max-width: 996px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 整体区域 */
+.promptSection {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+/* 标题 */
+.promptHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.promptHeader h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.promptHeader p {
+  margin-top: 10px;
+  color: #64748b;
+}
+
+/* 网格布局 */
+.promptGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* 卡片 */
+.promptCard {
+  background: #fff;
+  border-radius: 18px;
+  padding: 26px;
+  border: 1px solid #eee;
+  transition: all 0.35s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.promptCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* 标签 */
+.promptTag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #6366f1;
+  margin-bottom: 12px;
+}
+
+/* 标题 */
+.promptCard h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* 描述 */
+.promptCard p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* 底部操作 */
+.promptAction {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6366f1;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.promptCard:hover .promptAction {
+  transform: translateX(6px);
+}
+@media (max-width: 996px) {
+  .promptGrid {
+    grid-template-columns: 1fr;
+  }
 }

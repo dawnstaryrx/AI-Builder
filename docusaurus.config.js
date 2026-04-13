@@ -91,11 +91,33 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'gettingStartedSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '快速开始',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docSidebar',
+            sidebarId: 'promptSidebar', // 对应新建的 sidebar
+            position: 'left',
+            label: 'Prompt',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'mcpSidebar', // 对应新建的 sidebar
+            position: 'left',
+            label: 'MCP',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'skillsSidebar', // 对应新建的 sidebar
+            position: 'left',
+            label: 'Skills',
+          },
+          {
+            to: '/blog',
+            label: '博客',
+            position: 'left',
+          },
           {
             href: 'https://github.com/dawnstaryrx/AI-Builder',
             label: 'GitHub',
